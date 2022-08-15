@@ -1,0 +1,58 @@
+::after,
+::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: medium;
+    padding: 0;
+}
+
+.wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/*===tabs===*/
+.input {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.tabs-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.content {
+    width: 100%;
+    display: none;
+    padding: 20px;
+    background-color: #eee;
+}
+
+.tab {
+    text-align: center; /*центрирую текст*/
+    padding: 20px 40px;
+    // flex-basis: 29%;
+    font-weight: bold;
+}
+
+#tab-1:checked ~ .tab-1,
+#tab-2:checked ~ .tab-2,
+#tab-3:checked ~ .tab-3,
+#tab-4:checked ~ .tab-4,
+#tab-5:checked ~ .tab-5,
+#tab-6:checked ~ .tab-6 {background-color: #eee; color: rgb(160, 32, 32);}
+
+#tab-1:checked ~ .content-1,
+#tab-2:checked ~ .content-2,
+#tab-3:checked ~ .content-3,
+#tab-4:checked ~ .content-4,
+#tab-5:checked ~ .content-5,
+#tab-6:checked ~ .content-6 {display: block;}
+
